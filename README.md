@@ -14,3 +14,24 @@
 - ✅ **互动练习** - 分级练习题和答案
 - ✅ **实战项目** - 从简单到复杂的完整项目
 - ✅ **详细文档** - 速查表、常见错误、学习资源
+
+2. 运行第一个程序
+bash
+
+复制
+
+下载
+# 进入基础示例目录
+cd src/basics
+
+# 编译运行 Hello World
+gcc hello-world.c -o hello
+./hello
+3. 查看输出
+text
+
+复制
+
+下载
+Hello, C World!
+Welcome to Steve-1219's C Learning Project!
