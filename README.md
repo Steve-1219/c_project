@@ -34,5 +34,6 @@ cd src/basics
 gcc hello-world.c -o hello
 ./hello
 
+# 结果
 Hello, C World!
 Welcome to Steve-1219's C Learning Project!
