@@ -33,3 +33,6 @@ cd src/basics
 # 编译运行 Hello World
 gcc hello-world.c -o hello
 ./hello
+
+Hello, C World!
+Welcome to Steve-1219's C Learning Project!
