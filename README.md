@@ -26,19 +26,3 @@ git clone https://github.com/Steve-1219/c-learning.git
 
 # 进入项目目录
 cd c-learning
-### 2. 运行第一个程序
-```bash
-# 进入基础示例目录
-cd src/basics
-
-# 编译运行 Hello World
-gcc hello-world.c -o hello
-./hello
-3. 查看输出
-text
-
-复制
-
-下载
-Hello, C World!
-Welcome to Steve-1219's C Learning Project!
