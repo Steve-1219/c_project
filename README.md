@@ -14,7 +14,7 @@
 - 🚀 **实战项目** - 从简单到复杂的完整项目
 - 📖 **详细文档** - 速查表、常见错误、学习资源
 
-### 获取代码
+## 获取代码
 ```bash
 # 克隆项目
 git clone https://github.com/Steve-1219/c-learning.git
