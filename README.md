@@ -26,12 +26,8 @@ git clone https://github.com/Steve-1219/c-learning.git
 
 # 进入项目目录
 cd c-learning
-2. 运行第一个程序
-bash
-
-复制
-
-下载
+### 2. 运行第一个程序
+```bash
 # 进入基础示例目录
 cd src/basics
 
