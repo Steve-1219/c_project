@@ -164,3 +164,78 @@ c-learning/
 - ⏳ 项目文档编写
 
 ---
+
+## 💡 特色示例
+
+### 1. 基础输入输出
+```c
+// src/basics/io-example.c
+#include <stdio.h>
+
+int main() {
+    char name[50];
+    int age;
+    
+    printf("请输入你的名字: ");
+    scanf("%s", name);
+    
+    printf("请输入年龄: ");
+    scanf("%d", &age);
+    
+    printf("\n👋 你好 %s！\n", name);
+    printf("🎂 你今年 %d 岁\n", age);
+    
+    return 0;
+}
+```
+
+### 2. 指针理解
+```c
+// src/pointers/basic-pointer.c
+#include <stdio.h>
+
+int main() {
+    int number = 42;
+    int *ptr = &number;
+    
+    printf("变量值: %d\n", number);
+    printf("变量地址: %p\n", &number);
+    printf("指针值: %p\n", ptr);
+    printf("指针指向的值: %d\n", *ptr);
+    
+    return 0;
+}
+```
+
+### 3. 文件操作示例
+```c
+// src/advanced/file-example.c
+#include <stdio.h>
+
+int main() {
+    FILE *file;
+    
+    // 写入文件
+    file = fopen("data.txt", "w");
+    if (file != NULL) {
+        fprintf(file, "C语言学习笔记\n");
+        fprintf(file, "作者: Steve-1219\n");
+        fclose(file);
+    }
+    
+    // 读取文件
+    char line[100];
+    file = fopen("data.txt", "r");
+    if (file != NULL) {
+        printf("文件内容:\n");
+        while (fgets(line, sizeof(line), file)) {
+            printf("%s", line);
+        }
+        fclose(file);
+    }
+    
+    return 0;
+}
+```
+
+---
