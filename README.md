@@ -26,6 +26,7 @@ git clone https://github.com/Steve-1219/c-learning.git
 
 # 进入项目目录
 cd c-learning
+```
 
 ### 2. 运行第一个程序
 ```bash
@@ -35,11 +36,14 @@ cd src/basics
 # 编译运行 Hello World
 gcc hello-world.c -o hello
 ./hello
+```
 
+### 3. 查看输出
+```
 Hello, C World!
 Welcome to Steve-1219's C Learning Project!
+```
 
----
 ### 第二部分：项目结构（单独的部分）
 ```markdown
 ## 📁 项目结构概览
