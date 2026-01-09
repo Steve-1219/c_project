@@ -326,9 +326,8 @@ Permission is hereby granted...
 
 ### 如果你是初学者：
 1. 阅读 [setup-guide.md](setup-guide.md) 配置环境
-2. 跟着 [tutorial.md](tutorial.md) 第一章学习
-3. 动手运行 `src/basics/` 中的示例
-4. 完成 [exercises/beginner/](exercises/beginner/) 中的练习题
+2. 动手运行 `src/basics/` 中的示例
+3. 完成 [exercises/beginner/](exercises/beginner/) 中的练习题
 
 ### 如果你已有基础：
 1. 直接挑战 [exercises/intermediate/](exercises/intermediate/) 中的练习题
