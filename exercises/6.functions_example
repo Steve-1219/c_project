@@ -1,1 +1,153 @@
+//定义有参函数min，求x和y的最小值
+int min(int a,int b);
+
+int main() {
+    int c,x,y;
+    printf("请输入两个数：");
+    scanf_s("%d,%d",&x,&y);
+    c=min(x,y);
+    printf("%d",c);
+    return 0;
+}
+
+int min(int a,int b)
+{
+    int z;
+    z=a>b?b:a;
+}
+
+
+//定义有参函数sum，求x和y的和
+int sum(int a,int b);
+
+int main() {
+    int c,x,y;
+    printf("请输入两个数：");
+    scanf_s("%d,%d",&x,&y);
+    c=sum(x,y);
+    printf("%d",c);
+    return 0;
+}
+
+int sum(int a,int b)
+{
+    int z;
+    z=a+b;
+}
+
+
+//输入四个整数，找出最大的数
+int max2(int x,int y);
+int max4(int a,int b,int c,int d);
+
+int main() {
+    int a,b,c,d,max;
+    printf("请输入四个整数：");
+    scanf_s("%d,%d,%d,%d",&a,&b,&c,&d);
+    max=max4(a,b,c,d);
+    printf("%d",max);
+    return 0;
+}
+
+int max2(int x,int y)
+{
+    int z;
+    z=x<y?y:x;
+    return(z);
+}
+
+int max4(int a,int b,int c,int d)
+{
+    int m;
+    m=max2(a,b);
+    m=max2(m,c);
+    m=max2(m,d);
+    return(m);
+}
+
+
+// 求n！，用递归
+int fac(int n);
+
+int main() {
+    int n, y;
+
+    printf("请输入一个整数：");
+    scanf_s("%d", &n);
+
+    if (n < 0) {
+        printf("负数没有阶乘！\n");
+        return 1;
+    }
+
+    y = fac(n);
+    printf("%d的阶乘 = %d\n", n, y);
+
+    return 0;
+}
+
+
+// 输入十个数，求出最大值和所在的位置
+int max(int x,int y);
+
+int main() {
+    int m,n, i,a[10];
+    m=a[0];
+    n=0;
+    printf("请输入10个值：");
+    for(i=0;i<10;i++)
+    {
+        scanf_s("%d",&a[i]);
+    }
+    for(i=0;i<10;i++)
+    {
+        if(max(m,a[i])>m)
+        {
+            m=max(m,a[i]);
+            n=i;
+        }
+    }
+    printf("最大的数是%d,位置是%d",m,n);
+    return 0;
+    }
+
+
+    int max(int x,int y)
+    {
+    int z;
+    z=x>y?x:y;
+    return(z);
+    }
+
+
+//数组中的十个数求平均值
+double aver(const double arr[10]);
+
+int main() {
+    double arr[10], average;
+
+    printf("请输入十个数：\n");
+    for (int i = 0; i < 10; i++) {
+        printf("第%d个数：", i + 1);
+        scanf_s("%lf", &arr[i]);
+    }
+
+    average = aver(arr);
+    printf("平均数：%.2lf\n", average);
+
+    return 0;
+}
+
+double aver(const double arr[10]) {
+    double sum = 0;
+
+    for (int i = 0; i < 10; i++) {
+        sum += arr[i];
+    }
+
+    return sum / 10;
+}
+
+
+
 
