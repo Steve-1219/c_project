@@ -60,3 +60,53 @@ int main()
 }
 
 
+//判断闰年
+int main()
+{
+    int year;
+    printf("请输入一个年份：");
+    scanf_s("%d",&year);
+    if((year%4==0&&year%100!=0)||(year%400==0))
+    {
+        printf("这是闰年！");
+    }else{
+        printf("这不是闰年！");
+    }
+
+    return 0;
+}
+
+
+//求方程a（x的平方）+bx+c=0的解
+int main() {
+    double a, b, c,disc,p,q,x1,x2;
+    printf("请输入方程系数a，b，c的值：");
+    scanf_s("%lf,%lf,%lf", &a, &b, &c);
+    disc=b*b-4*a*c;
+    p=-b/(2*a);
+    q=sqrt(disc)/(2*a);
+    x1=p+q;
+    x2=p-q;
+    if (a == 0)
+    {
+        printf("这不是二元一次方程！");
+    }
+    else
+    {
+        if(disc==0)
+        {
+            printf("方程有两个相同的实数根,为x1=x2=%.2lf",x1);
+        }
+        else if(disc>0)
+        {
+            printf("方程有两个实数根，x1=%.2lf,x2=%.2lf",x1,x2);
+        }
+        else
+        {
+            printf("方程没有实数根！");
+        }
+    }
+    return 0;
+}
+
+
