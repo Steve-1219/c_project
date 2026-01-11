@@ -1,1 +1,25 @@
+//函数计算阶乘
+int fun(int n);
+
+int main() {
+    int n,t=0;
+    printf("请输入一个数：");
+    scanf_s("%d",&n);
+    t=fun(n);
+    printf("%d",t);
+    return 0;
+}
+
+int fun(int n)
+{
+    if(n==0||n==1)
+    {
+        return 1;
+    }else
+    {
+        return n*fun(n-1);
+    }
+}
+
+
 
