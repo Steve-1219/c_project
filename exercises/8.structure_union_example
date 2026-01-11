@@ -1,0 +1,94 @@
+//输出一个学生信息（学号，姓名，性别，住址）
+
+struct Student
+{
+    long int num;
+    char name[20];
+    char sex;
+    char addr[20];
+};
+
+int main() {
+    struct Student student1={10101,"Mike",'M',"Beijing"};
+    printf("学号:%ld,姓名:%s,性别:%c,地址:%s",student1.num,student1.name,student1.sex,student1.addr);
+    return 0;
+}
+
+
+//有三个候选人，每个选民只能投一票，统计选票的结果
+
+struct Candidate {
+    char name[20];
+    int votes;
+};
+
+int main() {
+    struct Candidate c[3] = {
+            {"张三", 0},
+            {"李四", 0},
+            {"王五", 0}
+    };
+
+    int n;  
+    int choice;
+
+    printf("=== 选举投票系统 ===\n\n");
+    
+    printf("候选人名单：\n");
+    for(int i = 0; i < 3; i++) {
+        printf("%d. %s\n", i+1, c[i].name);
+    }
+    
+    printf("\n请输入选民人数：");
+    scanf_s("%d", &n);
+    
+    printf("\n开始投票：\n");
+    for(int i = 0; i < n; i++) {
+        printf("第%d位选民，请投票（输入1-3）：", i+1);
+        scanf_s("%d", &choice);
+        
+        while(choice < 1 || choice > 3) {
+            printf("无效选择！请输入1-3：");
+            scanf_s("%d", &choice);
+        }
+
+        c[choice-1].votes++; 
+        printf("已投票给：%s\n\n", c[choice-1].name);
+    }
+    
+    printf("\n=== 投票结果 ===\n");
+    printf("姓名\t票数\n");
+    printf("------------\n");
+
+    for(int i = 0; i < 3; i++) {
+        printf("%s\t%d\n", c[i].name, c[i].votes);
+    }
+
+    return 0;
+}
+
+
+//有三个学生的信息，存放在结构体数组中，要求输出全部学生的信息
+struct Student {
+    int id;
+    char name[20];
+    int age;
+    float score;
+};
+
+int main() {
+    // 定义并初始化结构体数组
+    struct Student students[3] = {
+            {1001, "张三", 18, 85},
+            {1002, "李四", 19, 92},
+            {1003, "王五", 17, 78}
+    };
+    struct Student *p;
+    for(p=students;p<students+3;p++)
+    {
+        printf("%5d,%5s,%5d,%5.0f\n",(*p).id,(*p).name,(*p).age,(*p).score);
+    }
+    return 0;
+}
+
+
