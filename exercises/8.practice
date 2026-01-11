@@ -1,0 +1,76 @@
+//定义一个结构体变量（包括年月日），计算当天在本年中是第几天，注意闰年问题
+
+struct Date {
+    int year;
+    int month;
+    int day;
+};
+
+int main() {
+    struct Date today;
+    int days_in_month[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+    int total_days = 0;
+    
+    printf("请输入日期（年 月 日）：");
+    scanf_s("%d %d %d", &today.year, &today.month, &today.day);
+    
+    int is_leap_year = 0;
+    if((today.year % 4 == 0 && today.year % 100 != 0) || (today.year % 400 == 0)) {
+        is_leap_year = 1;
+        days_in_month[1] = 29; 
+    }
+    
+    if(today.month < 1 || today.month > 12) {
+        printf("月份无效！\n");
+        return 1;
+    }
+
+    if(today.day < 1 || today.day > days_in_month[today.month - 1]) {
+        printf("日期无效！\n");
+        return 1;
+    }
+    
+    for(int i = 0; i < today.month - 1; i++) {
+        total_days += days_in_month[i];
+    }
+    total_days += today.day;
+    
+    printf("%d年%s闰年\n", today.year, is_leap_year ? "是" : "不是");
+    printf("%d年%d月%d日 是这一年的第 %d 天\n",
+           today.year, today.month, today.day, total_days);
+
+    return 0;
+}
+
+
+//使用结构体类型输出一年中12个月的英文名称和天数
+
+struct Month {
+    char name[20];
+    int days;
+};
+
+int main() {
+    struct Month months[12] = {
+            {"January", 31},
+            {"February", 28},
+            {"March", 31},
+            {"April", 30},
+            {"May", 31},
+            {"June", 30},
+            {"July", 31},
+            {"August", 31},
+            {"September", 30},
+            {"October", 31},
+            {"November", 30},
+            {"December", 31}
+    };
+
+    printf("月份（英文）\t天数（平年）\n");
+
+    for(int i = 0; i < 12; i++) {
+        printf("%-15s\t%d\n", months[i].name, months[i].days);
+    }
+
+    return 0;
+}
